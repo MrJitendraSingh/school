@@ -31,7 +31,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 
 from django.urls import path
-from schoolapp import views
+from schoolapp import views, HodViews
 from school import settings
 
 
@@ -42,5 +42,7 @@ urlpatterns = [
     path('dologin', views.dologin),
     path('get_user_details', views.getUserDetails),
     path('logout_user', views.logOutUser),
+    path('admin_home', HodViews.adminHome),
+    path('add_staffs', HodViews.addStaffs),
 
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_URL)+static(settings.STATIC_URL, document_root = settings.STATIC_URL)

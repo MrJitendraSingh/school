@@ -8,23 +8,23 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{% static "plugins/fontawesome-free/css/all.min.css"%}">
+  <link rel="stylesheet" href="{% static "plugins/fontawesome-free/css/all.min.css" %}">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="{% static "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"%}">
+  <link rel="stylesheet" href="{% static "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" %}">
   <!-- Tempusdominus Bbootstrap 4 -->
-  <link rel="stylesheet" href="{% static "plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css"%}">
+  <link rel="stylesheet" href="{% static "plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" %}">
   <!-- iCheck -->
-  <link rel="stylesheet" href="{% static "plugins/icheck-bootstrap/icheck-bootstrap.min.css"%}">
+  <link rel="stylesheet" href="{% static "plugins/icheck-bootstrap/icheck-bootstrap.min.css" %}">
   <!-- JQVMap -->
-  <link rel="stylesheet" href="{% static "plugins/jqvmap/jqvmap.min.css"%}">
+  <link rel="stylesheet" href="{% static "plugins/jqvmap/jqvmap.min.css" %}">
   <!-- Theme style -->
-  <link rel="stylesheet" href="{% static "dist/css/adminlte.min.css"%}">
+  <link rel="stylesheet" href="{% static "dist/css/adminlte.min.css" %}">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="{% static "plugins/overlayScrollbars/css/OverlayScrollbars.min.css"%}">
+  <link rel="stylesheet" href="{% static "plugins/overlayScrollbars/css/OverlayScrollbars.min.css" %}">
   <!-- Daterange picker -->
-  <link rel="stylesheet" href="{% static "plugins/daterangepicker/daterangepicker.css"%}">
+  <link rel="stylesheet" href="{% static "plugins/daterangepicker/daterangepicker.css" %}">
   <!-- summernote -->
-  <link rel="stylesheet" href="{% static "plugins/summernote/summernote-bs4.css"%}">
+  <link rel="stylesheet" href="{% static "plugins/summernote/summernote-bs4.css" %}">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
   {% block custom_css %}{% endblock custom_css %}
@@ -60,17 +60,32 @@
     </form>
 
     <!-- Right navbar links -->
-    {% include "notification_templates.html" %}
+    {% include "hod_templates/notification_templates.html" %}
   </nav>
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
 
-  {% include "sidebar_templates.html" %}
+  {% include "hod_templates/sidebar_templates.html" %}
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
-  {% include "content_header.html" %}
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark"> {% block page_title %}{% endblock page_title %}</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active">Dashboard v1</li>
+              </ol>
+            </div><!-- /.col -->
+          </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+      </div>
     <!-- /.content-header -->
 
     <!-- Main content -->
@@ -78,7 +93,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  {% include "footer.html" %}
+  {% include "hod_templates/footer.html" %}
 
 </div>
 <!-- ./wrapper -->
