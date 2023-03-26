@@ -44,5 +44,6 @@ urlpatterns = [
     path('logout_user', views.logOutUser),
     path('admin_home', HodViews.adminHome),
     path('add_staffs', HodViews.addStaffs),
+    path('add_staffs_save', HodViews.addStaffsSave)
 
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_URL)+static(settings.STATIC_URL, document_root = settings.STATIC_URL)
