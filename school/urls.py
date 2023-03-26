@@ -44,6 +44,10 @@ urlpatterns = [
     path('logout_user', views.logOutUser),
     path('admin_home', HodViews.adminHome),
     path('add_staffs', HodViews.addStaffs),
-    path('add_staffs_save', HodViews.addStaffsSave)
+    path('add_staffs_save', HodViews.addStaffsSave),
+    path('add_courses', HodViews.addCourses),
+    path('add_courses_save', HodViews.addCoursesSave),
+    path('add_student', HodViews.addStudent),
+    path('add_student_save', HodViews.addStudentSave)
 
 ]+static(settings.MEDIA_URL, document_root = settings.MEDIA_URL)+static(settings.STATIC_URL, document_root = settings.STATIC_URL)
